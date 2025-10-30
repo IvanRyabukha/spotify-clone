@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 14px;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@theme {
+  --color-primary: #ffbf1d;
+  --color-secondary: #F98305;
+
+  --color-bg: #222327;
+  --color-bg-secondary: #25262C;
+
+  --color-player-bg: #2F3034;
+
+  --text-xxs: 0.7rem;
+
+  --spacing-layout: 1.5rem;
+}
+
+a {
+  text-decoration: inherit;
+}
+
+body {
+  @apply bg-bg;
+
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  cursor: pointer;
+}
+
+
