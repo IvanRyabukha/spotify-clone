@@ -1,5 +1,6 @@
-import { LIBRARY_MENU_ITEMS, MENU_ITEMS } from "@/data/menu.data";
-import { Menu } from "./Menu";
+import { LIBRARY_MENU_ITEMS, MENU_ITEMS } from '@/data/menu.data';
+import { Menu } from './Menu';
+import { SidebarPlaylists } from './SidebarPlaylists';
 
 export function LeftSidebar() {
   return (
@@ -12,8 +13,7 @@ export function LeftSidebar() {
 
       <hr className="my-10 border-player-bg" />
 
-      {/* TODO: Add playlsit */}
-      <Menu items={[]} title="Play Lists" />
+      <SidebarPlaylists />
     </aside>
   );
 }
