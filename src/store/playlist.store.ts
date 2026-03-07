@@ -20,26 +20,26 @@ class PlayListStore {
     this.saveToLocalStorage();
   }
 
-  addPlayList(playListName: string, trackName: string) {
+  toggleTrackInPlaylist(playListName: string, trackName: string) {
     const playlist = this.playLists.find(p => p.name === playListName);
+    if (!playlist) return;
 
-    if (!playlist || playlist.tracks.includes(trackName)) {
-      return;
+    if (playlist.tracks.includes(trackName)) {
+      playlist.tracks = playlist.tracks.filter(name => name !== trackName);
+    } else {
+      playlist.tracks.push(trackName);
     }
 
-    playlist.tracks.push(trackName);
     this.saveToLocalStorage();
   }
 
-  removeFromPlaylist(playListName: string, trackName: string) {
+  isTrackInPlaylist(playListName: string, trackName: string) {
     const playlist = this.playLists.find(p => p.name === playListName);
     if (!playlist) {
       return;
     }
 
-    playlist.tracks = playlist.tracks.filter(name => name !== trackName);
-
-    this.saveToLocalStorage();
+    return playlist.tracks.includes(trackName);
   }
 }
 

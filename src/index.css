@@ -71,4 +71,22 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
 
+.fade-in {
+  animation: fade-in 0.4;
+}
+
+@keyframes fade-in{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

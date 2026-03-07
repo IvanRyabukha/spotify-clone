@@ -2,7 +2,8 @@ import TrackInfo from '@/components/ui/track-info/TrackInfo';
 import { favoriteStore } from '@/store/favorite.store';
 import type { ITrack } from '@/types/track.types';
 import formatTime from '@/utils/dayjs';
-import { Ellipsis, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { AddToPlaylist } from './AddToPlaylist';
 
 interface Props {
   track: ITrack;
@@ -34,11 +35,7 @@ export function Track({ track }: Props) {
             }
           />
         </button>
-        <button>
-          <Ellipsis
-            className="opacity-30 duration-300 hover:opacity-100"
-          />
-        </button>
+        <AddToPlaylist track={track} />
       </div>
     </div>
   );

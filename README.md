@@ -3,6 +3,8 @@
 A modern **Spotify-like music streaming web app** built with **React + TypeScript**, using **MobX** for state management and **TailwindCSS** for styling.  
 The project focuses on creating a high-quality frontend experience without a backend — replicating the core UI and interactions of Spotify.
 
+**🔗 Live Demo:** [https://ivanryabukha.github.io/spotify-clone/](https://ivanryabukha.github.io/spotify-clone/)
+
 ---
 
 ## 🚀 Tech Stack
@@ -45,3 +47,17 @@ yarn install
 # 3. Start the development server
 npm run dev
 ```
+
+---
+
+## 🚀 Deployment
+
+The project is automatically deployed to GitHub Pages when changes are pushed to the `main` or `develop` branch.
+
+**Manual deployment:**
+```bash
+npm run deploy
+```
+
+This will build the project and deploy it to the `gh-pages` branch.
+
